@@ -1,0 +1,24 @@
+{
+  "name": "upstage",
+  "version": "0.0.2",
+  "description": "Utility to crawl an entry URL and produce a static copy of the site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaw187/upstage.git"
+  },
+  "keywords": [
+    "crawl",
+    "static",
+    "cache"
+  ],
+  "author": "James Weston",
+  "license": "BSD",
+  "dependencies": { 
+    "httpAgent" : "",
+    "jsdom" : ""
+    }
+}

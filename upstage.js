@@ -133,7 +133,7 @@ var Site = function (options) {
             html: agent.body,
             scripts: ['http://code.jquery.com/jquery.min.js']
           }, function (err, window) {
-            if (!window) return false;
+            if (!window || !window.jQuery) return false;
 
             var $ = window.jQuery;
 
@@ -144,6 +144,10 @@ var Site = function (options) {
             $("img").each(function () {
                 evaluateLink($(this).attr("src"),agent);
               });
+
+            $("iframe").each(function () {
+                evaluateLink($(this).attr("src"),agent);
+              }); 
 
             $("script").each(function () {
                 evaluateLink($(this).attr("src"),agent);
